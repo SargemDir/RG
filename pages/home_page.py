@@ -41,4 +41,4 @@ class HomePage(BasePage):
         return self.wait_visible(self.gmar_heshbon)
 
     def click_mivzakim_button(self):
-        self.click(self.header_mivzakim_button)
+        self.click(self.mivzakim)
