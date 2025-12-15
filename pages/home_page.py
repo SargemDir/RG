@@ -15,7 +15,7 @@ class HomePage(BasePage):
 
     # Toshavim droped down buttons (when click on toshavim button)
         # שירותים
-    hirum = ("xpath", "//app-main-menu-expanded/div[2]/div/div[1]/ul/li[10]/a")
+    hirum = ("xpath", "//div[@aria-labelledby='category-0']//a[normalize-space()='חירום']")
 
     # Asakim droped down buttons (when click on asakim button)
         # עסקים בדיגיטל
