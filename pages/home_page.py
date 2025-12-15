@@ -15,7 +15,7 @@ class HomePage(BasePage):
 
     # Toshavim droped down buttons (when click on toshavim button)
         # שירותים
-    hirum = ("css selector", "li.item-container:nth-child(10) > a:nth-child(1)")
+    hirum = ("xpath", "//app-main-menu-expanded/div[2]/div/div[1]/ul/li[10]/a")
 
     # Asakim droped down buttons (when click on asakim button)
         # עסקים בדיגיטל
