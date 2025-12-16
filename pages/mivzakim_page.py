@@ -4,7 +4,8 @@ from pages.base_page import BasePage
 class MivzakimPage(BasePage):
     url = 'https://ramat-gan.muni.il/notifications'
 
-    title = ("css selector", "h2[class~=heading] > .brand-color")
+    # title = ("css selector", "h2[class~=heading] > .brand-color")
+    title = ("xpath", "//section[@role='dialog']//h2//span[contains(text(),'מבזקים')]")
 
 
     def __init__(self, driver):

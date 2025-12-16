@@ -19,5 +19,4 @@ class TestDemo(BaseTest):
         self.home_page.open_page()
         self.home_page.click_mivzakim_button()
         assert self.mivzakim_page.is_title_visible()
-        # попробовать айфрейм, ищет на главной странице - тест падает
         assert self.mivzakim_page.get_title() == "מבזקים"
