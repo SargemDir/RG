@@ -15,7 +15,9 @@ class TestDemo(BaseTest):
         assert self.home_page.gmar_heshbon_button_is_visible()
 
     # Header click on מבזקים button and verify it's opened
-    # def test_mivzakim_opened(self):
-    #     self.home_page.open_page()
-    #     self.home_page.click_mivzakim_button()
-    #     assert self.home_page.title_is_visible()
+    def test_mivzakim_opened(self):
+        self.home_page.open_page()
+        self.home_page.click_mivzakim_button()
+        assert self.mivzakim_page.is_title_visible()
+        # попробовать айфрейм, ищет на главной странице - тест падает
+        assert self.mivzakim_page.get_title() == "מבזקים"

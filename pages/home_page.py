@@ -7,7 +7,7 @@ class HomePage(BasePage):
     # Header buttons
     toshavim = ("xpath", "//header/div/nav/ul/li[1]/ul/li[1]")
     asakim = ("xpath", "//li[1]/ul/li[2]//span[2]")
-    mivzakim = ()
+    mivzakim = ("css selector", "header > div > [class^=flash]")
     peulot_ba_digital = ()
     pniya_le_moked = ()
     language_change = ()
