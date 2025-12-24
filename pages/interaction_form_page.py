@@ -17,6 +17,9 @@ class InteractionFormPage(BasePage):
     emscheh_lvl3_button = ("css selector", ".primary > span > span")
     select_file_locator = ("css selector", ".select-file")
 
+    # lvl4 elements
+    i_am_from_ramatgan_locator = ("css selector", "#mat-radio-2  label mat-icon")
+
 
 
 
