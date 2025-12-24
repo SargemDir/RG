@@ -9,7 +9,7 @@ class HomePage(BasePage):
     asakim = ("xpath", "//li[1]/ul/li[2]//span[2]")
     mivzakim = ("css selector", "header > div > [class^=flash]")
     peulot_ba_digital = ()
-    pniya_le_moked = ()
+    pniya_le_moked = ("css selector", ".second-menu-part  app-menu-item> a > button > span:nth-child(2)")
     language_change = ()
     search = ()
 
@@ -30,6 +30,9 @@ class HomePage(BasePage):
 
     def click_toshavim_button(self):
         self.click(self.toshavim)
+
+    def click_pniya_le_moked_button(self):
+        self.click(self.pniya_le_moked)
 
     def hirum_button_is_visible(self):
         return self.wait_visible(self.hirum)
