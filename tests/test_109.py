@@ -10,5 +10,6 @@ class TestMoked(BaseTest):
         self.interaction_form_page.check_aher_element_checkbox()
         self.interaction_form_page.click_on_emshech_lvl1_button()
         self.interaction_form_page.fill_data_and_go_to_next_page()
+        self.interaction_form_page.upload_file_via_ui()
         sleep(10)
 
