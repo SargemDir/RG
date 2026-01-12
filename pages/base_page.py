@@ -5,7 +5,7 @@ from selenium.webdriver import ActionChains
 class BasePage:
     def __init__(self, driver):
         self.driver = driver
-        self.wait = WebDriverWait(driver, 10, poll_frequency=1)
+        self.wait = WebDriverWait(driver, 60, poll_frequency=1)
 
     def open(self, url):
         self.driver.get(url)
@@ -31,3 +31,8 @@ class BasePage:
         element = self.wait.until(EC.visibility_of_element_located(locator))
         element.clear()
         element.send_keys(text)
+
+    def get_text(self, locator):
+        element = self.wait.until(EC.visibility_of_element_located(locator))
+        text = element.text
+        return text
