@@ -29,13 +29,13 @@ jobs:
             pytest --junitxml=/app/test-results/results.xml --html=/app/test-results/report.html
 
       - name: Upload test results (JUnit XML)
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: junit-results
           path: test-results/results.xml
 
       - name: Upload HTML report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: html-report
           path: test-results/report.html
