@@ -14,21 +14,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Build Docker image
-        run: docker build -t selenium-tests .
-
       - name: Create directory for test artifacts
         run: mkdir -p test-results
+
+      - name: Build Docker image
+        run: docker build -t selenium-tests .
 
       - name: Run tests in Docker
         run: |
           docker run --rm \
             --shm-size=2g \
             -v ${{ github.workspace }}/test-results:/app/test-results \
-            selenium-tests \
-            pytest --junitxml=/app/test-results/results.xml --html=/app/test-results/report.html
+            selenium-tests
 
-      - name: Upload test results (JUnit XML)
+      - name: Upload JUnit XML results
         uses: actions/upload-artifact@v4
         with:
           name: junit-results
